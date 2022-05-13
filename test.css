@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Mono&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #eee;
+    font-family: "Fira Mono", Inconsolata, monospace;
+    font-size: 20pt;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+}
+
+table.keys td {
+    padding: 10px;
+    text-align: left;
+}
+
+button.numkey {
+    box-shadow: -6px -6px 9px 0px white, 6px 6px 9px rgba(0, 0, 0, 0.4);
+    font-size: 20pt;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    background: #eee;
+    cursor: pointer;
+}
+
+button.numkey:hover,
+button.numkey:active {
+    background: #aaa;
+}
+
+button.numkey:active {
+    box-shadow: inset -6px -6px 9px 0px rgba(255, 255, 255, 0.4), inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+}
+
+.opkey {
+    box-shadow: -6px -6px 9px 0px white, 6px 6px 9px rgba(0, 0, 0, 0.4);
+    font-size: 20pt;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #aaa;
+}
+
+.opkey:hover,
+.opkey:active {
+    color: #eee;
+    background: #666;
+}
+
+.opkey:active {
+    box-shadow: inset -6px -6px 9px 0px rgba(255, 255, 255, 0.4), inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+}
+
+.eqkey {
+    box-shadow: -6px -6px 9px 0px white, 6px 6px 9px rgba(0, 0, 0, 0.4);
+    font-size: 20pt;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: darkorange;
+}
+
+.arrSpace {
+    box-shadow: -6px -6px 9px 0px white, 6px 6px 9px rgba(0, 0, 0, 0.4);
+    font-size: 20pt;
+    height: 100%;
+    width: 60px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #aaa;
+}
+
+.backSpace {
+    box-shadow: -6px -6px 9px 0px white, 6px 6px 9px rgba(0, 0, 0, 0.4);
+    font-size: 20pt;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #aaa;
+}
+
+.minus {
+    height: 100%;
+}
+
+.eqkey:hover,
+.eqkey:active {
+    background: orange;
+}
+
+.eqkey:active {
+    box-shadow: inset -6px -6px 9px 0px rgba(255, 255, 255, 0.4), inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+}
+
+main {
+    text-align: center;
+}
+
+#result-box {
+    -webkit-appearance: none;
+    -mox-appearance: none;
+    appearance: none;
+    width: 320px;
+    height: 90px;
+    padding: 16px 32px;
+    text-align: right;
+    border: none;
+    border-radius: 30px;
+    box-shadow: inset -6px -6px 9px 0px white, inset 6px 6px 9px rgba(0, 0, 0, 0.4);
+    text-shadow: 6px 6px 9px rgba(0, 0, 0, 0.3);
+    overflow-x: scroll;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background: aqua;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: green;
+    color: white;
+}
+
+.modal-header h2 {
+    background-color: green;
+}
+
+.close {
+    background-color: red;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}

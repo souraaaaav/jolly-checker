@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Neumorphism calculator design</title>
+    <link rel="stylesheet" href="test.css">
+
+</head>
+
+<body>
+    <main>
+        <div id="result-box"></div>
+        <table class='keys'>
+            <tr>
+                <td>
+                    <button class='opkey' id="clear" op='clear' onclick="resClear()">AC</button>
+                </td>
+                <td>
+                    <button class='opkey num-button' op='negate'>-</button>
+                </td>
+                <td colspan="2">
+                    <button op='mod' class="opkey backSpace" onclick="backSpace()">
+                        <-</button> </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class='numkey num-button'>7</button>
+                </td>
+                <td>
+                    <button class='numkey num-button'>8</button>
+                </td>
+                <td>
+                    <button class='numkey num-button'>9</button>
+                </td>
+                <td>
+                    <button class='opkey' op='times' onclick="arrayStart()">[</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class='numkey num-button'>4</button>
+                </td>
+                <td>
+                    <button class='numkey num-button'>5</button>
+                </td>
+                <td>
+                    <button class='numkey num-button'>6</button>
+                </td>
+                <td class="minus">
+                    <button class='opkey' op='minus' onclick="arrayEnd()">]</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class='numkey num-button'>1</button>
+                </td>
+                <td>
+                    <button class='numkey num-button'>2</button>
+                </td>
+                <td>
+                    <button class='numkey num-button'>3</button>
+                </td>
+                <td>
+                    <button class='opkey num-button' op='negate'>,</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class='numkey num-button'>0</button>
+                </td>
+                <td colspan='3'>
+                    <button class='eqkey' onclick="checkJolly()">check</button>
+                </td>
+            </tr>
+        </table>
+        <!-- The success Modal -->
+        <div id="myModalSuccess" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Yes!!!!!</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="givenArr1"></p>
+                    <p style="color: green;">It is a jolly</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- The failed Modal -->
+        <div id="myModalfailed" class="modal">
+            <div class="modal-content fail">
+                <div class="modal-header fail">
+                    <h2>no!!!!!</h2>
+                </div>
+                <div class="modal-body">
+                    <p id="givenArr2"></p>
+                    <p style="color: red;">No It is not jolly</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="test.js"></script>
+</body>
+
+</html>
